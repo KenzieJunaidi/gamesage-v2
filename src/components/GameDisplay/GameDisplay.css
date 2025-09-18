@@ -1,0 +1,106 @@
+.card-container {
+  display: grid;
+  width: 100%;
+  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  min-height: 600px;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    border-radius: 15px;
+    padding: 1rem;
+
+    background: linear-gradient(
+        135deg,
+        rgba(30, 136, 229, 0.2) 0%,
+        rgba(185, 227, 255, 0.2) 50%,
+        rgba(30, 136, 229, 0.25) 100% 
+    );
+
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+.card-content {
+    padding: 0.75rem 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.game-title {
+    word-break: break-word;
+    font-size: var(--subtitle);
+    color: var(--primary-light);
+    font-weight: 700;
+    line-height: 1.2;
+
+    transition: color 0.3s ease-in-out;
+}
+
+
+.game-price {
+    font-size: var(--text);
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+
+    margin-bottom: 0.5rem;
+}
+
+.game-desc {
+    font-size: var(--text);
+    color: rgba(255, 255, 255, 0.45);
+    font-weight: 500;
+
+    margin-bottom: 0.5rem; 
+}
+
+.card-genres {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.genre, .genre-more {
+    padding: 0.3rem 0.8rem;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 50px;
+    border: 1px solid var(--primary-light);
+    font-size: var(--text);
+    color: var(--text-color);
+}
+
+.card:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(30, 136, 229, 0.4) 0%,
+        rgba(185, 227, 255, 0.5) 50%,
+        rgba(30, 136, 229, 0.45) 100% 
+    );
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.card:hover .game-title {
+    color: var(--text-color);
+}
+
+/* medium screens */
+@media (max-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* small screens */
+@media (max-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
