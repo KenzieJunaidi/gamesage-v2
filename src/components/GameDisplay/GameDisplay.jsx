@@ -110,7 +110,7 @@ export const GameDisplay = (props) => {
                             backgroundRepeat: "no-repeat",
                             width: "100%",
                             aspectRatio: "460 / 215",
-                            borderRadius: "15px",
+                            borderRadius: "10px 10px 0 0",
                         }} />
                         <motion.div className="card-content">
                             <div>
@@ -120,10 +120,12 @@ export const GameDisplay = (props) => {
                                 :
                                 <h5 className="game-price item-container">Rp{game.price.toLocaleString("id-ID")}</h5>
                                 }
+
+                                <div className="game-desc">
+                                    <p>{game.short_description.length > 130 ? game.short_description.slice(0, 130).trimEnd() + "..." : game.short_description}</p>
+                                </div>
                             </div>
-                            <div className="game-desc">
-                                <p>{game.short_description.length > 130 ? game.short_description.slice(0, 130).trimEnd() + "..." : game.short_description}</p>
-                            </div>
+    
                             <div>
                                 <div className="card-genres">
                                     {game.genres.slice(0, 3).map((genre, idx) => (

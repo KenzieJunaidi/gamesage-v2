@@ -13,6 +13,7 @@
   --text-color-dark: #AFAFAF;
   --background: #121212;
   --card-background: #1E1E1E;
+  --card-border: rgba(148, 163, 184, 0.1);
   --item-background: #212E3C;
   --line-break: #2c2c2c;
 
@@ -99,7 +100,7 @@ body {
 }
 
 .gamebank-title {
-  font-size: var(--subtitle);
+  font-size: var(--title);
   color: var(--primary);
   position: relative;
 
