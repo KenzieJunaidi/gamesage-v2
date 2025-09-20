@@ -13,6 +13,7 @@
   --text-color-dark: #AFAFAF;
   --background: #121212;
   --card-background: #1E1E1E;
+  --card-background-glow: #333333;
   --card-border: rgba(148, 163, 184, 0.1);
   --item-background: #212E3C;
   --line-break: #2c2c2c;
@@ -100,8 +101,7 @@ body {
 }
 
 .gamebank-title {
-  font-size: var(--title);
-  color: var(--primary);
+  font-size: var(--subtitle);
   position: relative;
 
   margin-bottom: 4rem;
@@ -114,13 +114,15 @@ body {
 .gamebank-title::after {
   content: "";
   position: absolute;
-  width: 0;
-  left: 0;
+  width: 30%;
+  left: 50%;
+
   bottom: -5px;
   
   height: 2px;
   background-color: var(--primary);
 
+  transform: translateX(-50%);
   transition: width 0.3s ease;
 }
 

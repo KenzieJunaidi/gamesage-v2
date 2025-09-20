@@ -1,0 +1,87 @@
+.recommendation-section {
+    max-height: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    transition: max-height 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.recommendation-section.grow {
+  max-height: 100vh;
+}
+
+/* Slider */
+.rec-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin: 20px auto;
+}
+
+.slider-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: var(--card-background);
+    color: white;
+
+    border: none;
+    padding: 18px 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    opacity: 0.75;
+}
+
+.slider-btn:hover {
+    background: var(--card-background-glow);
+    opacity: 1;
+}
+
+.rec-slider-track {
+    display: flex;
+    gap: 10px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-item {
+    width: 300px;
+    border-radius: 5px;
+
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    background-color: var(--card-background);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+
+    margin-bottom: 4rem;
+}
+
+.slider-item:hover {
+    background-color: var(--card-background-glow);
+}
+
+.price-container {
+    padding: 0.25rem 0.75rem;
+    margin: 0.25rem;
+    border-radius: 5px;
+    background-color: var(--background);
+}
+
+.price-container p {
+    color: var(--text-color);
+    font-size: 0.9rem;
+    font-weight: 600;
+}

@@ -1,9 +1,16 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { GameDisplay } from "./GameDisplay/GameDisplay";
+import { RecSlider } from "../RecSlider/RecSlider";
 
-export const GameBank = () => {
+export const GameBank = ({searchInput, setSearchInput}) => {
     const [isActive, setIsActive] = useState([]);
+    const [rec, setRec] = useState([]);
+
+    useEffect(() => {
+        handleRecommend(searchInput);
+    }, [searchInput]);
 
     const handleActive = (id, e) => {
         
@@ -19,8 +26,23 @@ export const GameBank = () => {
         setIsActive((prev) => prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]);
     }
 
+    const handleRecommend = async (searchInput) => {
+        try {
+            const response = await axios.get("http://127.0.0.1:5000/", {
+                params: {searchInput}
+            });
+            setRec(response.data);
+            console.log("CHECKING: ", response.data)
+
+        } catch (err) {
+            console.error(err.response ? err.response.data : err.message)
+        }
+    }
+
     return (
         <motion.section className="gamebank-page">
+            <RecSlider searchInput={searchInput} games={rec} />
+
             <h1 className="gamebank-title">Browse by Category</h1>
             <motion.div className="filter-options">
                 <motion.button className={`filter-card ${isActive.includes("Action") ? "active" : ""}`}

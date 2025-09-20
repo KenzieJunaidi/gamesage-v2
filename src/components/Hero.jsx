@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Slider } from "./Slider/Slider";
 import { SearchBar } from "./SearchBar/SearchBar";
 
-export const Hero = () => {
+export const Hero = ({searchInput, setSearchInput}) => {
 
     const sliders = [
         {
@@ -74,7 +74,7 @@ export const Hero = () => {
             <motion.div className="hero-content">
                 <h1 className="hero-title">Discover Your Next <i style={{ color: "var(--primary)" }}>Adventure</i></h1>
                 <h3 className="hero-subtitle">Explore. Play. Enjoy.</h3>
-                <SearchBar />
+                <SearchBar searchInput={searchInput} setSearchInput={setSearchInput}/>
             </motion.div>
         </motion.section>
     );

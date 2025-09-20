@@ -8,6 +8,7 @@ import './App.css'
 function App() {
 
   const [isLoaded, setIsLoaded] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
 
   useEffect(() => {
     setIsLoaded(false);
@@ -16,9 +17,9 @@ function App() {
 
   return (
     <div className={`app ${isLoaded ? "loaded" : ""}`}>
-      <Hero />
+      <Hero searchInput={searchInput} setSearchInput={setSearchInput}/>
       <hr style={{ border: "none", borderTop: "1px solid var(--line-break)" }} />
-      <GameBank />
+      <GameBank searchInput={searchInput} setSearchInput={setSearchInput}/>
     </div>
   )
 }

@@ -20,11 +20,16 @@
 .search-button {
     background-color: transparent;
     border: none;
+    cursor: pointer;
 }
 
 .search-icon {
     color: rgba(255, 255, 255, 0.75);
     font-size: 1rem;
+}
+
+.search-icon:hover {
+    color: var(--primary);
 }
 
 .searchbar:focus {
@@ -43,10 +48,52 @@
 .suggestion-box {
   position: absolute;
   top: 100%;
-  border-radius: 15px;
+  border-radius: 10px;
   width: min(75vw, 440px);
+  max-height: 225px;
   margin-top: 5px;
+  padding: 0.5rem 1rem;
+  gap: 2rem;
 
-  min-height: 30vh; /* TEMPORARY */
-  background-color: red; /* TEMPORARY */
+  background: rgba(0, 0, 0, 0.75);
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--text-color) transparent;
+
+  visibility: hidden;
+}
+
+/* Chrome, Edge, Safari */
+.suggestion-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.suggestion-box::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.suggestion-box::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+
+.result {
+    cursor: pointer;
+    font-size: var(--text);
+    font-weight: 500;
+
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+}
+
+.result:hover {
+   background: rgb(255, 255, 255, 0.1);
+   z-index: 1000;
+}
+
+.show {
+    visibility: visible;
 }
