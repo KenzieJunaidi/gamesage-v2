@@ -85,8 +85,15 @@
     color: var(--text-color);
 }
 
+/* medium-large screens */
+@media (max-width: 1440px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 /* medium screens */
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
     .card-container {
         grid-template-columns: repeat(2, 1fr);
     }

@@ -102,7 +102,10 @@ export const GameDisplay = (props) => {
             
             {games.map((game, idx) => {
                 return (
-                    <motion.div key={idx} className="card" ref={games.length === idx + 1 ? lastElementRef : null} variants={cardFade(idx)} whileHover={{ translateY: "-5px", scale: 1.025 }}>
+                    <motion.div key={idx} className="card" ref={games.length === idx + 1 ? lastElementRef : null} 
+                        onClick={() => props.handleCardClick(game)}
+                        variants={cardFade(idx)} whileHover={{ translateY: "-5px", scale: 1.025 }}
+                    >
                         <motion.div style={{
                             backgroundImage: `url("${game.header_image}")`,
                             backgroundSize: "cover",

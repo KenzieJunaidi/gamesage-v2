@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { GameDisplay } from "./GameDisplay/GameDisplay";
 import { RecSlider } from "../RecSlider/RecSlider";
 
-export const GameBank = ({searchInput, setSearchInput}) => {
+export const GameBank = ({searchInput, setSearchInput, handleCardClick}) => {
     const [isActive, setIsActive] = useState([]);
     const [rec, setRec] = useState([]);
 
@@ -41,7 +41,7 @@ export const GameBank = ({searchInput, setSearchInput}) => {
 
     return (
         <motion.section className="gamebank-page">
-            <RecSlider searchInput={searchInput} games={rec} />
+            <RecSlider searchInput={searchInput} games={rec} handleCardClick={handleCardClick}/>
 
             <h1 className="gamebank-title">Browse by Category</h1>
             <motion.div className="filter-options">
@@ -88,7 +88,7 @@ export const GameBank = ({searchInput, setSearchInput}) => {
                     <h3>Sports</h3>
                 </motion.button>
             </motion.div>
-            <GameDisplay filters={isActive} />
+            <GameDisplay filters={isActive} handleCardClick={handleCardClick}/>
         </motion.section>
     );
 }
