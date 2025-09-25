@@ -71,9 +71,9 @@ npm run dev
 
 ## 📸 Screenshots  
 
-![Landing Page](./assets/screenshots/landing-screenshot.png)  
-![Games Display](./assets/screenshots/display-screenshot.png)  
-![Games Detail](./assets/screenshots/detail-screenshot.png)  
+![Landing Page](src/assets/screenshots/landing-screenshot.png)  
+![Games Display](src/assets/screenshots/display-screenshot.png)  
+![Games Detail](src/assets/screenshots/detail-screenshot.png)  
 
 ## 📝 License  
 
