@@ -9,6 +9,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    opacity: 0;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.detail-section.display {
+    opacity: 1;
 }
 
 .back-btn {
@@ -30,6 +36,7 @@
 
 .back-text {
     font-weight: 400;
+    cursor: pointer;
 }
 
 .detail-card {
@@ -58,7 +65,7 @@
     grid:
         "A A A" 1fr
         "A A A" 1fr
-        "B C D" 1fr
+        "B C D" auto
         / 1fr 1fr 1fr;
     gap: 8px;
 }
@@ -98,6 +105,47 @@
 .border img {
     border: 2px solid rgb(255, 255, 255, 0.8);
     transform: scale(1);
+}
+
+.item-name {
+    font-size: var(--subtitle);
+}
+
+.item-desc {
+    text-align: justify;
+    color: var(--text-color-dark);
+    font-size: var(--text);
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+}
+
+.item-price {
+    font-size: var(--text);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.classifier-wrapper {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.classifier {
+    color: var(--text-color-fade);
+}
+
+.item-genre-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    max-width: 450px;
+}
+
+.item-genre {
+    /* background-color: var(--card-background-glow); */
+    border: 2px solid var(--card-border);
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
 }
 
 /* Media Queries */

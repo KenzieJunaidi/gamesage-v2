@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+h1, h2, h3, h4, h5, p, span {
+  cursor: default;
+}
+
 :root {
   --primary: #1e88e5;
   --primary-glass: #0F1E3CB2;
@@ -11,6 +15,7 @@
 
   --text-color: #FFFFFF;
   --text-color-dark: #AFAFAF;
+  --text-color-fade: #7c7c7cde;
   --background: #121212;
   --card-background: #1E1E1E;
   --card-background-glow: #333333;
@@ -185,6 +190,7 @@ body {
   z-index: 3;
 
   margin-top: 4rem;
+  cursor: pointer;
 }
 
 .filter-card:hover h3 {
