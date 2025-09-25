@@ -69,6 +69,12 @@ npm install
 npm run dev
 ``` 
 
+## 📸 Screenshots  
+
+![Landing Page](./assets/screenshots/landing-screenshot.png)  
+![Games Display](./assets/screenshots/display-screenshot.png)  
+![Games Detail](./assets/screenshots/detail-screenshot.png)  
+
 ## 📝 License  
 
 MIT License © 2025 Kenzie Junaidi
