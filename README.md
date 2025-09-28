@@ -63,8 +63,8 @@ flask run
 ```
 
 #### 2️⃣ Frontend (React) 
+From the project root folder, run:
 ```bash
-cd frontend
 npm install
 npm run dev
 ``` 
