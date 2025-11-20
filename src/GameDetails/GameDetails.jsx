@@ -1,13 +1,5 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react"; 
-import { Thumbs, FreeMode, Navigation } from "swiper/modules";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
 
 import "./GameDetails.css";
 
